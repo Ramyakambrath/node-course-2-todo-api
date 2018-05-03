@@ -37,8 +37,7 @@ describe('POST /todos',()=>{
 
     it('Shouldnot create a new todo',(done)=>{
 
-
-        request(app)
+         request(app)
         .post('/todos')
         .send({})
         .expect(400)
@@ -50,8 +49,10 @@ describe('POST /todos',()=>{
             Todo.find().then((todos)=>{
                 expect(todos.length).toBe(0);
                 done();
-            })
-        }).catch((e)=> {done(e)});
+            }).catch((e)=> {
+                done(e);
+            });    
+        });
 
     })
 })
