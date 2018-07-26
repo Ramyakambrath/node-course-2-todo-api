@@ -14,7 +14,9 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh '''
+npm i expect mocha nodemon supertest --save-dev
+npm test'''
       }
     }
   }
