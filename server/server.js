@@ -31,8 +31,8 @@ app.get('/todos',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('Started on port 3000')
+app.listen(8070,()=>{
+    console.log('Started on port 8070')
 })
 
 module.exports={app};
